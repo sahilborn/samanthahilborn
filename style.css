@@ -1,0 +1,343 @@
+/******************** NAVIGATION ************************/
+nav {
+    width: 100%; 
+    background: linear-gradient(to bottom, aliceblue 40%, transparent 100%); 
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+    display: flex;
+    justify-content: center;
+    padding: 1rem 2vw;
+    box-sizing: border-box;
+}
+/* 
+body{
+    font-size: 16em;
+} */
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.home {
+    flex-grow: 1;
+}
+
+.right-links {
+    justify-content: flex-end;
+    display: flex;
+}
+
+.right-links li {
+    margin-left: 10px;
+}
+
+li a {
+    /* padding: 1rem 1.5vw; */
+    text-decoration: none;
+    display: block;
+} 
+
+/* home button */
+#home_button{
+    background-image: url('imgs/home_button.PNG');
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    width: 10vw;
+    height: 5vh;
+    transition: transform 0.3s ease;
+}
+
+/* code button */
+#code_button{
+    background-image: url('imgs/code_button.PNG');
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    width: 10vw;
+    height: 5vh;
+    transition: transform 0.3s ease;
+}
+
+/* design button */
+#design_button{
+    background-image: url('imgs/design_button.PNG');
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    width: 10vw;
+    height: 5vh;
+    transition: transform 0.3s ease;
+}
+
+/* contact button */
+#contact_button{
+    background-image: url('imgs/contact_button.PNG');
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    width: 10vw;
+    height: 5vh;
+    transition: transform 0.3s ease;
+}
+
+#home_button:hover, #code_button:hover, #design_button:hover, #contact_button:hover {
+    transform: scale(1.1);
+}
+
+
+/******************** HOME AREA ************************/
+.intro {
+    position: relative; /* Relative positioning to act as anchor for absolute positioning */
+    width: 100%; /* Ensure full width */
+    text-align: center; /* Center the text horizontally */
+    margin-top: 20px; /* Adjusted margin */
+}
+
+
+#introImg {
+    position: relative;
+    z-index: 991;
+    width: 80%;
+    height: 80%;
+    object-fit: cover; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+#star1{
+    top: 45%;
+    left: 10%;
+    position: absolute;
+    z-index: 990;
+    height: 30%;
+    background-size: contain; 
+    display: block; 
+    opacity: 90%;
+}
+
+#star2{
+    height: 30%;
+    top: 20%;
+    right:10%;
+    position: absolute;
+    z-index: 990;
+    background-size: contain; 
+    display: block; 
+    opacity: 90%;
+}
+
+.container {
+    position: absolute; 
+    top: 56%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: white; 
+    text-align: left;
+    width:40vw;
+    z-index: 999;
+} 
+
+.introduction {
+    position: absolute; 
+    top: 32%;
+    left: 51%; 
+    transform: translate(-50%, -50%); 
+    color: rgb(48, 48, 48); 
+    text-align: left;
+    width:40vw;
+    z-index: 999;
+} 
+
+.introduction img{
+    margin-top: 2rem;
+    margin-left: 2vw;
+    width: 35vw;
+}
+
+.text {
+    font-size: 2vw; 
+    color: rgb(40, 40, 40);
+    font-weight: 600;
+}
+
+.first-text {
+    color: rgb(48, 48, 48); 
+}
+
+.sec-text {
+    color: rgb(48, 48, 48); 
+}
+
+
+body {
+    background-color: aliceblue;
+}
+
+.contact-links{
+    position: absolute; 
+    top: 60%;
+    left: 80%; 
+    transform: translate(-50%, -50%); 
+    color: white; 
+    text-align: left;
+    width:40vw;
+    z-index: 999;
+}
+
+.contact-links img {
+    margin-left: 1vw;
+    height: 3vw;
+    transition: transform 0.3s ease;
+    animation: pulse 3s infinite; /* Apply the pulsing animation */
+}
+
+/* .contact-links img{
+    margin-left: 1vw;
+    height: 3vw;
+    transition: transform 0.3s ease;
+} */
+
+
+.contact-links img:hover{
+    transform: scale(1.1);
+    opacity: 0.7 !important;
+    /* animation-play-state: paused;  */
+}
+
+.container .text {
+    position: relative;
+    color: rgb(47, 47, 47);
+    font-size: 3vw;
+    /* font-family: "Fira Code", monospace; */
+    font-family: "Jersey 20", monospace;
+}
+
+.introduction h2{
+    /* font-family: "Fira Code", monospace; */
+    font-family: "Jersey 20", monospace;
+    color: rgb(47, 47, 47);
+    font-size: 3vw;
+    margin-bottom: 0;
+}
+
+.container .text.first-text {
+    color: rgb(47, 47, 47);
+}
+
+.text.sec-text:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: aliceblue;
+    border-left: 0.2vw solid black;
+    animation: animate 4s steps(12) infinite;
+}
+
+@keyframes animate{
+    40%, 60%{
+        left: 100%;
+    }
+    100%{
+        left: 0%;
+    }
+}  
+
+
+
+/* Media query for screens wider than 800px */
+@media (min-width: 800px) {
+    #home_button, #code_button, #design_button, #contact_button {
+        width: 10vw;
+        height: 6vh;
+    }
+
+    #star1{
+        height: 45%;
+        top: 41%;
+        left: 5%;
+    }
+
+    #star2{
+        height: 30%;
+        top: 20%;
+        right: 10%;
+    }
+} 
+
+/* Media query for screens NOT wider than 1000px */
+@media (max-width: 1200px) {
+    .images img{
+        margin-top: 10em;
+        /* top: 100vw; */
+        /* height: 10vw; */
+    }
+}
+
+.about img{
+    height: 8vw;
+    margin-left: 3vw;
+}
+
+/******************** IMAGES ************************/
+.images{
+    position: absolute;
+    z-index: 10;
+    top: 60vw;
+    left: 60%; 
+}
+
+.images img{
+    /* top: 35%;
+    left: 51%;  */
+    width:50%;
+    height: 50%;
+}
+
+
+
+/******************** PITCH ************************/
+.about p{
+    font-family: "Jersey 20", monospace;
+    color: rgb(40, 40, 40);
+    font-size: 2em; 
+}
+
+
+.about-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100vh; /* Takes full height of the viewport */
+    padding: 20px; /* Optional: Adds some padding around the content */
+}
+
+
+.about {
+    background-color: white;
+    width: 60%; /* Control the width of the container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 4vw; /* Add some padding inside the box for better text presentation */
+    position: relative; /* Ensures that positioning is relative to the nearest positioned ancestor */
+    transform: translateY(20%); /* Pull back up 50% of its own height to center vertically */
+    /* border: 4px solid rgb(150, 163, 201); */
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(0.9);   /* Original size */
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1); /* Slightly larger */
+        opacity: 0.9;
+    }
+}
